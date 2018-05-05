@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-header (ToggleRegisterForm)="onRegisterLink($event)"></app-header>
+    </div>
+  </div>
+  <hr/>
+  <ng-container *ngIf="showRegisterForm">
+      <div class="row">
+          <app-register-user></app-register-user>
+      </div>
+  </ng-container>
+  <ng-container *ngIf="!showRegisterForm">
+      <div class="row">
+          <div class="col-md-3">
+            LHS Menu
+          </div>
+          <div class="col-md-9">
+          </div>
+        </div>
+        </ng-container>
+</div>
+
